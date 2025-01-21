@@ -36,7 +36,7 @@ people = ['Список', 'ФИО', 'Сотрудников']
 login = getpass.getuser()
 password = keyring.get_password("Jira", login)
 # Наш jql запрос
-jql = f'(project in (prokect1, prokect2) OR (PROJECT in (prokect3) AND Level = name)) AND created >= {first_day} AND created <= {last_day} ORDER BY created DESC'
+jql = f'(project in (project1, project2) OR (PROJECT in (project3) AND Level = name)) AND created >= {first_day} AND created <= {last_day} ORDER BY created DESC'
 # Подключаемся
 jira = JIRA('https://jiradomain.ru/jira',
             basic_auth=(login, password), options={'verify': False})
